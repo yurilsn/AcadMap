@@ -37,8 +37,8 @@ A aplicação está sendo desenvolvida sob o padrão de desenvolvimento de softw
 ```
 
 Em casos de dúvidas quanto ao padrão de desenvolvimento MVC, consulte os seguintes links: 
-https://developer.mozilla.org/en-US/docs/Glossary/MVC
-https://www.geeksforgeeks.org/mvc-framework-introduction/
+- https://developer.mozilla.org/en-US/docs/Glossary/MVC
+- https://www.geeksforgeeks.org/mvc-framework-introduction/
 
 ## Convenções e Boas Práticas
 Com o objetivo de manter o repositório organizado e bem estruturado, foram definidos alguns hábitos e convenções:
