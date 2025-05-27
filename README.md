@@ -26,9 +26,17 @@ A aplicação está sendo desenvolvida sob o padrão de desenvolvimento de softw
 │   ├── Dockerfile
 │   ├── public
 │   └── src
-│       ├── components
-│       ├── pages
-│       └── services
+│       ├── assets
+│       ├── App.css
+│       ├── App.jsx
+│       ├── index.css
+│       └── main.jsx
+│   ├── eslint.config.js
+│   ├── index.html
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── vite.config.js
+│   └── README.md
 ├── .github
 │   └── workflows
 │       └── ci.yml
