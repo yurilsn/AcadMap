@@ -25,3 +25,21 @@ npm install
 npm run dev
 ```
 Após o **npm run dev** já é possível ver o link para acessar no terminal.
+## Evitando Problemas Utilizando Docker
+
+Para evitar problemas do frontend não estar executando em diferentes maquinas, foi feita conteirização com Docker.
+
+[Recomendo instalar o docker na sua maquina](https://www.docker.com/)
+
+***ANTES DO PULL REQUEST, TENTE EXECUTAR COM DOCKER PARA GARANTIR QUE TUDO ESTA EXECUTANDO COMO O ESPERADO***
+
+Para utilizar o docker, entre no diretório frontend e execute os comandos abaixo.
+```bash
+docker build -t front .
+docker run -p 5173:5173 front
+```
+
+O primeiro comando acima faz o build do codigo do front.
+
+O segundo comando faz o run da imagem gerada pelo build, fornecendo no terminal o link para acessar o frontend.
+
