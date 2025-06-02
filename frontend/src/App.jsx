@@ -1,11 +1,9 @@
-import { useState } from 'react'
-import './styles/App.css'
+import './styles/App.css';
 
 function App() {
   return (
     <>
-      <div>
-      </div>
+      <div></div>
       <h1>AcadMap</h1>
       <div className="card">
         <p>
@@ -13,7 +11,7 @@ function App() {
         </p>
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -25,6 +25,15 @@ npm install
 npm run dev
 ```
 Após o **npm run dev** já é possível ver o link para acessar no terminal.
+## Usando prettier e eslint
+
+Para garantir que o código esteja formatado corretamente foi usado o prettier e eslint.
+Para rodar basta executar os comandos ja definidos no package.json
+```bash
+npm run lint
+npm run format:check
+```
+O npm run lint vai verificar se o código está de acordo com as regras do eslint, e o npm run format:check vai verificar se o código está formatado de acordo com as regras do prettier. Ambos somente irão apontar onde estão os problemas, mas não irão corrigir.
 ## Evitando Problemas Utilizando Docker
 
 Para evitar problemas do frontend não estar executando em diferentes maquinas, foi feita conteirização com Docker.
