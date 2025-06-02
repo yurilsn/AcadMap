@@ -16,7 +16,7 @@ public class DepartamentoEnderecoRest {
 
     private CrudDepartamentoEnderecoService crudDepartamentoEnderecoService;
 
-    @PostMapping
+    @PostMapping("/{id}")
     public Departamento creadEstoqueLoja(@RequestBody Departamento departamento){
         return crudDepartamentoEnderecoService.createDepartamentoEndereco(departamento);
     }

@@ -2,7 +2,9 @@ package com.acadmap.service;
 
 
 import com.acadmap.model.Departamento;
+import com.acadmap.model.Endereco;
 import com.acadmap.repository.DepartamentoRepository;
+import com.acadmap.repository.EnderecoRepository;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.BeanUtils;
@@ -16,6 +18,7 @@ import java.util.List;
 public class CrudDepartamentoEnderecoService {
 
     private DepartamentoRepository departamentoRepository;
+    private EnderecoRepository enderecoRepository;
 
     @Transactional
     public Departamento createDepartamentoEndereco(Departamento departamento){
@@ -34,7 +37,12 @@ public class CrudDepartamentoEnderecoService {
         Departamento departamentoAtual = departamentoRepository.findById(id).orElseThrow(EntityNotFoundException::new);
         BeanUtils.copyProperties(departamentoAtualizado, departamentoAtual, "id", "enderecos");
         departamentoAtual.getEnderecos().clear();
-        departamentoAtual.getEnderecos().addAll(departamentoAtualizado.getEnderecos());
+        departamentoAtualizado.getEnderecos().forEach(
+                enderecoAtualizado -> {
+                    enderecoRepository.save(enderecoAtualizado);
+                    departamentoAtual.adicionarEndereco(enderecoAtualizado);
+                }
+        );
         return departamentoRepository.save(departamentoAtual);
     }
 }

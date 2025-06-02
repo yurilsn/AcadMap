@@ -8,6 +8,8 @@ import lombok.*;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @Entity
@@ -40,4 +42,10 @@ public class Departamento {
             inverseJoinColumns = @JoinColumn(name = "endereco_id")
     )
     private List<Endereco> enderecos;
+
+    public void adicionarEndereco(Endereco endereco) {
+        enderecos.add(endereco);
+        endereco.setDepartamentos(new ArrayList<>(Arrays.asList(this)));
+    }
+
 }
