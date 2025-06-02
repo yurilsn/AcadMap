@@ -21,9 +21,19 @@ Com isso, já e possível fazer o clone do repo, entrar na pasta frontend e inst
 ```bash
 git clone https://github.com/SainyGb/AcadMap.git 
 cd AcadMap/frontend
-npm install
+npm install 
+npm run prepare
+npm run lint
+npm run format:check
 npm run dev
 ```
+
+* npm install : instala as bibliotecas necessarias
+* npm run prepare : faz a iniciação do husky para automatizar pre comitts evitando codigos nao desejados
+* npm run lint : faz o lint para verificar se tudo esta como o desejado
+* npm run format:check : faz a verificação da formatação para verificar se esta como o esperado
+* npm run dev : roda a aplicação frontend
+
 Após o **npm run dev** já é possível ver o link para acessar no terminal.
 ## Usando prettier e eslint
 
